@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+}
+// .red{
+//   height: 40vh;
+//   width: 30vw;
+//   background-color: red
+// // }
+
+
+// html{
+//   // by default font-size =>16px
+//   font-size: 40px;
+// }
+
+// h1{
+//   font-size: 2rem;//1rem =>16px
+// }
+
+
+
+
+
+
+// html{
+//   font-size: 40px;
+// }
+// body{
+//   font-size: 50px;
+// }
+// main{
+//   font-size: 30px;
+// }
+// section{
+//   font-size: 200px;
+// }
+// h1{
+//   font-size: 1em;  // 1em =>200px
+// }
+// h2{
+//   font-size: 1em;
+// }
+
+
+// for the concept of the percentge  => '%'
+
+// .red{
+//   background-color: red;
+//   height: 400px;
+//   width: 400px;
+
+//   .blue{
+//   height: 50%;
+//   width: 50%;
+//   background-color: blue;
+// }
+
+// }
+
+
+
+//<<<<<<<<<<<<for the concept of fluid typography--with the help of clamp(LowerLimit, vlaue, UpperLimit)>>>>>>>>>>>>>>>>>>>
+
+html{
+  font-size:clamp(14px , 1vw , 18px);
+}
+h1{
+  font-size: 10rem;
+}
