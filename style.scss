@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+}
+#parent{
+   height: 100%;
+  width: 100%;
+  background-color: black;
+   display: flex;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+  gap: 10px;
+  padding: 8px;
+  border: 3px solid blue;
+  border-radius: 15px;
+  grid-template-areas:"img1 img2 img2 img2"
+                      "img1 img2 img2 img2"
+                      "img1 img3 img4 img5" 
+  
+  ;
+
+  #img1{
+    background-color: red;
+    grid-area: img1;
+    border-radius: 15px;
+    background-image: url(./img-1.jpg);
+     background-size: cover;
+      background-position: center;
+    
+   
+  } 
+  
+  #img2{
+    background-color: green;
+     grid-area: img2;
+     border-radius: 15px;
+      background-image: url(./img.2.2.jpg);
+       background-size: cover;
+       background-position: center;
+  }
+  #img3{
+     grid-area: img3;
+    background-color: yellow;
+    border-radius: 15px;
+     background-image: url(./img-3.jpg);
+      background-size: cover;
+      background-position: center;
+    } 
+  #img4{
+    border-radius: 15px;
+     grid-area: img4;
+    background-color: blue;
+     background-image: url(./img-4.jpg);
+      background-size: cover;
+          background-position: top;
+  } 
+  #img5{
+    border-radius: 15px;
+     grid-area: img5;
+    background-color:orange;
+     background-image: url(./img-5.jpg);
+      background-size: cover;
+            background-position: center;
+  } 
+
+} 
