@@ -14,7 +14,8 @@ html, body{
 }
 html{
   color: white;
-  font-weight:50px;
+  font-weight:50;
+  font-size:clamp(14px, 15vw ,18px)
 }
 body{
     background-color: black;
@@ -34,7 +35,7 @@ main{
   align-items: center;
   @include flex-Column(0rem);
  
-      section{
+      section.view-1{
          width: 100%;
          padding: 1rem;
          @include flex-Column(2rem);
@@ -48,20 +49,20 @@ main{
          }
       }
       .bottom{
-        background-color: rgb(38, 38, 38);
+        background-color: #1E1E1E;
         border-radius: 10px; 
         padding: 1.5rem;
         @include flex-Column(1.5rem); 
         p{
           font-family: proj;
-          font-weight: 100px;
+          font-weight: 100;
               }
 
          .text{
           @include flex-Column(0.7rem);
 
           h1{
-            font-weight: 200px;
+            font-weight: 100;
             font-size: 2.5rem;
             text-transform: uppercase;
             font-family: proj;
@@ -70,7 +71,7 @@ main{
           }
           p{
             font-size: 1.2rem;
-            font-weight: 100px;
+            font-weight: 100;
             opacity: 0.5;
             line-height: 1.7;
             font-family: proj;    
@@ -87,23 +88,145 @@ main{
 
          }
       }
+
+
   }
+
+      section.view-2{
+        width: 100%;
+        @include flex-Column(2rem);
+        padding: 1rem;
+        font-family: proj;
+
+        small{
+          opacity: 0.5;
+        }
+      
+        .top,.bottom{
+          display: flex;
+          width: 100%;
+          justify-content: space-around;
+
+          .element{
+            text-align: center;
+            @include flex-Column(0.5rem);
+            h2{
+              font-size: 3rem;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+
+      section.view-3{
+        @include flex-Column(2rem);
+        padding: 1rem;
+        width: 100%;
+        gap: 0.7rem;
+        font-family: proj;
+
+        img{
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        .bottom{
+          background-color: #1E1E1E;
+          border-radius: 10px;
+          padding: 1.5rem;
+          @include flex-Column(1.5rem);
+
+          .text{
+            @include flex-Column(0.7rem);
+
+          h1{
+            font-weight: 300;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-family: proj;
+          }
+          .paragraph{
+            font-weight: 100;
+            opacity: 0.5;
+            p{
+              line-height: 1.5rem;
+            }
+          }
+          }
+        }
+        .bottom>p{
+          text-transform: uppercase;
+          gap: 9rem;
+        }
+
+      }
+
+
+
+
+
+
+
+      section.view-5{
+       @include flex-Column(2rem);
+        width: 100%;  
+        .card{
+            width: 100%;
+            background-image: url(./card1.webp);
+            background-size: cover;
+            aspect-ratio: 1/1;
+            padding: 1rem;
+            border-radius: 0.7rem;
+            @include flex-Column(0rem);
+            justify-content: space-between;
+            padding: 1rem;
+             
+
+            .icon,.bottom{
+              justify-content: space-between;
+              background-color: rgba(156, 155, 155, 0.169);
+              backdrop-filter: blur(5px);
+              border-radius: 0.8rem;
+              border: 1px solid rgb(161, 157, 157);
+             }
+              .top{
+                display: flex;
+                justify-content: flex-end;
+                gap: 0.5rem;
+              }
+              .icon{
+                width: fit-content;
+                border-radius: 50%;
+              }
+              .bottom{
+                display: flex;
+                justify-content: space-between;
+                padding: 1.2rem 1rem;
+
+                p{
+                  text-transform: uppercase;
+                }
+              }
+            
+          }
+      }
+
 }
 
 
 
 @media (min-width:900px){
   main{
-    section{
+    section.view-1{
       flex-direction: row;
-      padding: 1rem 4rem;
+      
       .top, .bottom{
         width: 50%;
       }
 
       .bottom{
         justify-content: space-between;
-        padding: 3rem;
+        padding: 2rem;
       
       .text{
         gap: 1.5rem;
@@ -116,6 +239,51 @@ main{
         };
       }
       }
+    }
+    section.view-2{
+
+      flex-direction: row;
+      padding: 3rem 4rem;
+
+    }
+    section.view-3{
+       flex-direction: row-reverse;
+
+       .top,.bottom{
+        width: 50%;
+        gap: 5rem;
+       }
+       .bottom{
+        justify-content: space-between;
+         padding: 6rem;
+         .text{
+          h1{
+            font-size: 3.5rem;
+          }
+         }
+
+        .paragraph{
+          display: flex;
+          gap: 2rem;
+          p{
+            line-height: 4;
+            font-size: 1.2rem;
+            
+          }
+        }
+       }
+    }
+
+
+
+
+
+
+
+    section.view-5{
+      flex-direction: row;
+      padding: 1rem 1rem;
+
     }
   }
 }

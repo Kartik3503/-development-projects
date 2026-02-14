@@ -15,7 +15,8 @@ html, body {
 
 html {
   color: white;
-  font-weight: 50px;
+  font-weight: 50;
+  font-size: clamp(14px, 15vw, 18px);
 }
 
 body {
@@ -33,51 +34,51 @@ main {
   flex-direction: column;
   gap: 0rem;
 }
-main section {
+main section.view-1 {
   width: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-main section .top {
+main section.view-1 .top {
   width: 100%;
 }
-main section .top img {
+main section.view-1 .top img {
   width: 100%;
   border-radius: 10px;
 }
-main section .bottom {
-  background-color: rgb(38, 38, 38);
+main section.view-1 .bottom {
+  background-color: #1E1E1E;
   border-radius: 10px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-main section .bottom p {
+main section.view-1 .bottom p {
   font-family: proj;
-  font-weight: 100px;
+  font-weight: 100;
 }
-main section .bottom .text {
+main section.view-1 .bottom .text {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
 }
-main section .bottom .text h1 {
-  font-weight: 200px;
+main section.view-1 .bottom .text h1 {
+  font-weight: 100;
   font-size: 2.5rem;
   text-transform: uppercase;
   font-family: proj;
 }
-main section .bottom .text p {
+main section.view-1 .bottom .text p {
   font-size: 1.2rem;
-  font-weight: 100px;
+  font-weight: 100;
   opacity: 0.5;
   line-height: 1.7;
   font-family: proj;
 }
-main section .bottom .text button {
+main section.view-1 .bottom .text button {
   width: -moz-fit-content;
   width: fit-content;
   border: none;
@@ -86,27 +87,169 @@ main section .bottom .text button {
   font-size: 1rem;
   border-radius: 0.5rem;
 }
+main section.view-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  font-family: proj;
+}
+main section.view-2 small {
+  opacity: 0.5;
+}
+main section.view-2 .top, main section.view-2 .bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+main section.view-2 .top .element, main section.view-2 .bottom .element {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main section.view-2 .top .element h2, main section.view-2 .bottom .element h2 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+main section.view-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
+  gap: 0.7rem;
+  font-family: proj;
+}
+main section.view-3 img {
+  width: 100%;
+  border-radius: 10px;
+}
+main section.view-3 .bottom {
+  background-color: #1E1E1E;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section.view-3 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+main section.view-3 .bottom .text h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: proj;
+}
+main section.view-3 .bottom .text .paragraph {
+  font-weight: 100;
+  opacity: 0.5;
+}
+main section.view-3 .bottom .text .paragraph p {
+  line-height: 1.5rem;
+}
+main section.view-3 .bottom > p {
+  text-transform: uppercase;
+  gap: 9rem;
+}
+main section.view-5 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+main section.view-5 .card {
+  width: 100%;
+  background-image: url(./card1.webp);
+  background-size: cover;
+  aspect-ratio: 1/1;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  justify-content: space-between;
+  padding: 1rem;
+}
+main section.view-5 .card .icon, main section.view-5 .card .bottom {
+  justify-content: space-between;
+  background-color: rgba(156, 155, 155, 0.169);
+  backdrop-filter: blur(5px);
+  border-radius: 0.8rem;
+  border: 1px solid rgb(161, 157, 157);
+}
+main section.view-5 .card .top {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+main section.view-5 .card .icon {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50%;
+}
+main section.view-5 .card .bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 1rem;
+}
+main section.view-5 .card .bottom p {
+  text-transform: uppercase;
+}
 
 @media (min-width: 900px) {
-  main section {
+  main section.view-1 {
     flex-direction: row;
-    padding: 1rem 4rem;
   }
-  main section .top, main section .bottom {
+  main section.view-1 .top, main section.view-1 .bottom {
     width: 50%;
   }
-  main section .bottom {
+  main section.view-1 .bottom {
     justify-content: space-between;
-    padding: 3rem;
+    padding: 2rem;
   }
-  main section .bottom .text {
+  main section.view-1 .bottom .text {
     gap: 1.5rem;
   }
-  main section .bottom .text h1 {
+  main section.view-1 .bottom .text h1 {
     font-size: 3.5rem;
   }
-  main section .bottom .text p {
+  main section.view-1 .bottom .text p {
     width: 60%;
     font-size: 1rem;
+  }
+  main section.view-2 {
+    flex-direction: row;
+    padding: 3rem 4rem;
+  }
+  main section.view-3 {
+    flex-direction: row-reverse;
+  }
+  main section.view-3 .top, main section.view-3 .bottom {
+    width: 50%;
+    gap: 5rem;
+  }
+  main section.view-3 .bottom {
+    justify-content: space-between;
+    padding: 6rem;
+  }
+  main section.view-3 .bottom .text h1 {
+    font-size: 3.5rem;
+  }
+  main section.view-3 .bottom .paragraph {
+    display: flex;
+    gap: 2rem;
+  }
+  main section.view-3 .bottom .paragraph p {
+    line-height: 4;
+    font-size: 1.2rem;
+  }
+  main section.view-5 {
+    flex-direction: row;
+    padding: 1rem 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
